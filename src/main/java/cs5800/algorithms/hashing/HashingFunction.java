@@ -15,8 +15,8 @@ public class HashingFunction {
         hash += (hash << 3);
         hash ^= (hash >>> 11);
         hash += (hash << 15);
-//        return hash < 0 ? (-hash) % maxSize : hash % maxSize;
-        return 10;
+        return hash < 0 ? (-hash) % maxSize : hash % maxSize;
+        
     }
 
     private static byte[] toByteArray(final Object obj) throws IOException {
